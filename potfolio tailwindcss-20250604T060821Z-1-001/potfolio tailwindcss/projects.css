@@ -1,0 +1,140 @@
+ body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000; /* Pure black background */
+            color: #fff; /* White text by default */
+            line-height: 1.6; /* Improved readability */
+        }
+
+        /* Custom styles for the abstract background patterns within cards */
+        .card-bg-gradient-purple {
+            background: linear-gradient(135deg, #4f46e5 0%, #a78bfa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-bg-gradient-purple::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 30% 70%, rgba(0,0,0,0.1) 0%, transparent 40%);
+            transform: rotate(45deg);
+        }
+
+        .card-bg-gradient-green {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-bg-gradient-green::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 30% 70%, rgba(0,0,0,0.1) 0%, transparent 40%);
+            transform: rotate(45deg);
+        }
+
+        .card-bg-gradient-red {
+            background: linear-gradient(135deg, #ef4444 0%, #fca5a5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-bg-gradient-red::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 30% 70%, rgba(0,0,0,0.1) 0%, transparent 40%);
+            transform: rotate(45deg);
+        }
+
+        .card-bg-gradient-blue {
+            background: linear-gradient(135deg, #3b82f6 0%, #93c5fd 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-bg-gradient-blue::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 30% 70%, rgba(0,0,0,0.1) 0%, transparent 40%);
+            transform: rotate(45deg);
+        }
+
+        .card-bg-gradient-orange {
+            background: linear-gradient(135deg, #f97316 0%, #fdba74 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-bg-gradient-orange::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 30% 70%, rgba(0,0,0,0.1) 0%, transparent 40%);
+            transform: rotate(45deg);
+        }
+
+        .card-bg-gradient-violet {
+            background: linear-gradient(135deg, #8b5cf6 0%, #c4b5fd 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-bg-gradient-violet::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 30% 70%, rgba(0,0,0,0.1) 0%, transparent 40%);
+            transform: rotate(45deg);
+        }
+
+        /* Ensure content is above the pseudo-element background */
+        .card-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .tag {
+            @apply inline-block bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full mr-2 mb-2;
+        }
+   .heading {
+  color: white;
+    font-size: clamp(20px, 4vw, 35px);
+  text-shadow: 2px 2px 4px hwb(180 78% 15%);
+    font-weight: bolder;
+  }
+.headingfont {
+  color: white;
+  text-shadow: 2px 2px 4px hwb(180 78% 15%);
+font-size: larger;
+  font-weight: bolder;
+ 
+}
+
+
+
+    .list-icon{
+width: 20px;
+text-align: center;
+margin-right: 8px
+}

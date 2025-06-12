@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliza - Portfolio</title>
+  <meta name="description" content="Aliza - Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
+  <link rel="icon" type="image/x-icon " href="img/website.png" />
+ 
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="skill.css">
+   <link rel="stylesheet" href="loader.css">
+  
+</head>
+
+<body class="font-sans bg-black min-h-screen">
+<div class="GetStarted" id = "GetStarted">
+<div class="loader">
+  <span></span>
+</div>
+</div>
+
+  <!-- Responsive Navbar -->
+  <nav class="bg-black shadow-lg sticky top-0 z-100 " style="box-shadow: 10px 10px 10px white;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <!-- Logo with Icon -->
+        <div class=" rotate-in-2-cw flex-shrink-0 flex items-center ">
+          <span class="  text-4xl  text-start font-bold
+            text-white">
+            <i class="fas fa-code  text-cyan-300 mr-2"></i>Aliza
+          </span>
+        </div>
+
+        <!-- Desktop Menu with Icons -->
+         <div class="hidden md:ml-6 md:flex md:items-center xl:space-x-7 md:space-x-1">
+          <a href="index.html" class="nav-link  text-white hover:text-teal-700 px-3 py-2 font-medium">
+            <i class="fas fa-home icons text-cyan-300"></i> Home
+          </a>
+          <a href="about.html" class="nav-link text-white hover:text-teal-700 px-3 py-2 font-medium">
+            <i class="fas fa-user icons text-cyan-300"></i> About
+          </a>
+          <a href="skill.html" class="nav-link text-white hover:text-teal-700 px-3 py-2 font-medium">
+            <i class="fas fa-cogs icons text-cyan-300"></i> Skills
+          </a>
+          <a href="projects.html" class="nav-link text-white hover:text-teal-700 px-3 py-2 font-medium">
+            <i class="fas fa-project-diagram icons text-cyan-300"></i> Projects
+          </a>
+          <a href="resume.html" class="nav-link text-white hover:text-teal-700 px-3 py-2 font-medium">
+            <i class="fas fa-file-alt icons text-cyan-300"></i> Resume
+          </a>
+          <a href="contact.html" class="nav-link  text-white hover:text-teal-700 px-3 py-2 font-medium">
+            <i class="fas fa-envelope icons text-cyan-300"></i> Contact
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center" >
+          <button id="mobile-menu-button" class="text-white  hover:text-teal-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Mobile Menu with Icons -->
+<div id="mobile-menu" class="md:hidden hidden fixed w-full z-50">
+  <div class="pt-2 pb-3 bg-black shadow-lg sm:px-3">
+    <a href="index.html" class="nav-link block px-3 py-2 mt-3  bg-gray-100 text-black hover:bg-gray-200 w-full rounded-3xl  font-medium">
+      <i class="fas fa-home text-cyan-300 w-6 mr-2"></i> Home
+    </a>
+    <a href="about.html" class="nav-link block px-3 py-2 mt-3 text-black bg-gray-100 hover:bg-gray-200  w-full rounded-3xl font-medium">
+      <i class="fas fa-user text-cyan-300 w-6 mr-2"></i> About
+    </a>
+    <a href="skill.html" class="nav-link block px-3 py-2 mt-3 text-black bg-gray-100 hover:bg-gray-200  w-full rounded-3xl font-medium">
+      <i class="fas fa-cogs text-cyan-300 w-6 mr-2"></i> Skills
+    </a>
+    <a href="projects.html" class="nav-link block px-3 py-2 mt-3 text-black bg-gray-100 hover:bg-gray-200 w-full rounded-3xl font-medium">
+      <i class="fas fa-project-diagram text-cyan-300 w-6 mr-2"></i> Projects
+    </a>
+    <a href="resume.html" class="nav-link block px-3 py-2 mt-3 text-black  bg-gray-100 hover:bg-gray-200  w-full rounded-3xl font-medium">
+      <i class="fas fa-file-alt text-cyan-300 w-6 mr-2"></i> Resume
+    </a>
+    <a href="contact.html" class="nav-link block px-3 py-2 mt-3 text-black bg-gray-100 hover:bg-gray-200  w-full rounded-3xl font-medium">
+      <i class="fas fa-envelope text-cyan-300 w-6 mr-2"></i> Contact
+    </a>
+  </div>
+</div>
+
+  </nav>
+<!-- Include in <body> -->
+<section class="  text-white bg-black h-100 w-full  ">
+  <!-- Header -->
+  <div class="   border-2 border-gray-700 text-center h-70 py-16 px-4"  style="background: linear-gradient(113deg, rgb(16, 20, 20) 2%, rgb(56, 205, 228) 45%, rgb(22, 34, 36) 88%, rgba(140, 215, 222, 1) 100% );">
+
+    <h1 class=" typewriter text-4xl md:text-5xl font-extrabold">My Professional Skills</h1>
+   
+    <p class="mt-4 text-lg text-white/90">Passionate about creating and delivering exceptional results</p>
+    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-5" >
+                <a href="projects.html" class="inline-block bg-white text-black  font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                    View My Projects
+                </a>
+                <a href="Aliza_Resume.pdf" download class="inline-block border border-white text-white hover:bg-cyan-700 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                    Download Resume <i class="fas fa-download ml-2"></i>
+                </a>
+            </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div class=" py-16 px-4 md:px-12 text-gray-900 ">
+    <h2 class="headingfont text-3xl font-bold text-center text-white mb-12">Technical Expertise</h2>
+
+    <div class="shadow-inset-center grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto ">
+      <!-- Technical Skills -->
+      <div class="bg-white shadow-lg rounded-xl p-6 transition delay-150 duration-300 ease-in-out hover:-translate-y-10 hover:scale-105">
+        <h3 class="text-xl font-semibold text-cyan-600 mb-4">Frontend Skills</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-1"><span>HTML</span><span>90%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[90%]"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span>CSS</span><span>85%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[85%]"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span>BOOTSTRAP</span><span>85%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[75%]"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1 upper-case"><span>tailwindcss</span><span>80%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[80%]"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="bg-white shadow-lg rounded-xl p-6 transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105"">
+        <h3 class="text-xl font-semibold text-cyan-600 mb-4">Backend  Skills</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-1"><span>GITHUB (Version control system)</span><span>95%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[95%]"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span>Advanced Jvascript </span><span>90%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[90%]"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span>PHP</span><span>85%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[85%]"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span>Problem solving </span><span>80%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-cyan-600 h-2 rounded-full w-[80%]"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Tools & Technologies Section -->
+<section class="bg-black py-16 px-4 md:px-12 text-center ">
+<div class="grid grid-cols-2  lg:grid-cols-4 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-6xl mx-auto">
+  <!-- HTML5 -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">HTML5</p>
+  </div>
+
+  <!-- CSS3 -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">CSS3</p>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">JavaScript</p>
+  </div>
+
+  <!-- Bootstrap -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">Bootstrap</p>
+  </div>
+
+  <!-- Tailwind CSS -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">Tailwind CSS</p>
+  </div>
+
+  <!-- GitHub -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">GitHub</p>
+  </div>
+
+  <!-- PHP -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">PHP</p>
+  </div>
+
+  <!-- jQuery -->
+  <div class="bg-white shadow-md p-4 rounded-xl flex flex-col items-center  transition delay-150 duration-300 ease-in-o ut hover:-translate-y-4 hover:scale-105">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="jQuery" class="h-12 mb-2" />
+    <p class="text-sm font-medium text-gray-800">jQuery</p>
+  </div>
+</div>
+
+</section>
+<!-- Specialized Areas Section -->
+<section class="py-16 px-4 md:px-12 text-center">
+  <h2 class="headingfont font-bold text-white mb-5">Specialized Areas</h2>
+
+  <div class=" grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto "> 
+    <!-- Frontend -->
+    <div class="bg-gradient-to-br from-blue-500 to-indigo-500 text-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+      <div class="text-4xl mb-4"><i class="fas fa-desktop"></i></div>
+      <h3 class="text-xl font-bold mb-2">Frontend Development</h3>
+      <p class="text-sm">Creating responsive, user-friendly interfaces with modern frameworks and best practices.</p>
+    </div>
+
+    <!-- Backend -->
+    <div class="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+      <div class="text-4xl mb-4"><i class="fas fa-database"></i></div>
+      <h3 class="text-xl font-bold mb-2">Backend Systems</h3>
+      <p class="text-sm">Building robust server-side applications with scalable architecture and efficient databases.</p>
+    </div>
+
+    <!-- Mobile -->
+    <div class="bg-gradient-to-br from-green-400 to-teal-500 text-white p-8 rounded-xl shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-4 hover:scale-105">
+      <div class="text-4xl mb-4"><i class="fas fa-mobile-alt"></i></div>
+      <h3 class="text-xl font-bold mb-2">Responsive Desgins</h3>
+      <p class="text-sm">I specialize in crafting responsive web interfaces that adapt seamlessly across all devices — from large desktop monitors to small mobile screens. </p>
+    </div>
+  </div>
+</section>
+</div>
+
+
+      <!-- Footer with Icons -->
+  <footer class=  "bg-black text-white py-12  flex justify-center align-middle w-full " style ="box-shadow:10px 10px 10px 10px white;">
+
+
+
+    <div class="max-w-7xl  px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            <i class="fas fa-code  text-cyan-300 mr-2"></i>Aliza
+          </h3>
+          <p class=  "text-white">
+            <i class="fas fa-laptop-code list-icon"></i>forented Developer creating beautiful, functional websites and applications.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">
+            <i class="fas fa-link text-cyan-300 mr-2"></i>Quick Links
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class=  "text-white hover:text-teal-400 transition">
+                <i class="fas fa-home   text-cyan-300 list-icon"></i>Home
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class=  "text-white hover:text-teal-400 transition">
+                <i class="fas fa-user   text-cyan-300 list-icon"></i>About
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class=  "text-white hover:text-teal-400 transition">
+                <i class="fas fa-project-diagram  text-cyan-300 list-icon"></i>Projects
+              </a>
+            </li>
+             <li>
+              <a href="resume.html" class=  "text-white hover:text-teal-400 transition">
+                <i class="fas fa-file-alt  text-cyan-300 list-icon"></i>Resume
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class=  "text-white hover:text-teal-400 transition">
+                <i class="fas fa-envelope  text-cyan-300 list-icon"></i>Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">
+            <i class="fas fa-tools  text-cyan-300 mr-2"></i>Skills
+          </h4>
+          <ul class="space-y-2">
+            <li class=  "text-white">
+              <i class="fas fa-paint-brush  text-cyan-300 list-icon"></i>Frontend Development
+            </li>
+            <!-- <li class=  "text-white">
+              <i class="fas fa-server list-icon"></i>Backend Development -->
+            </li>
+            <li class=  "text-white">
+              <i class="fas fa-palette  text-cyan-300 list-icon"></i>UI/UX Design
+            </li>
+            <!-- <li class=  "text-white">
+              <i class="fas fa-database list-icon"></i>Database Management
+            </li> -->
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">
+            <i class="fas fa-share-alt  text-cyan-300 mr-2"></i>Connect
+          </h4>
+          <div class="flex ">
+            <a href="https://github.com/alizaGhanci" class=  "text-white hover:text-cyan-600 text-xl">
+              <i class="fab fa-github  text-cyan-300"></i>
+            </a>
+            <a href="#" class=" ml-5 text-white hover:text-cyan-600 text-xl">
+              <i class="fab fa-linkedin   text-cyan-300"></i>
+            </a>
+       
+            <a href="#" class=" ml-5 text-white hover:text-cyan-600  text-xl">
+              <i class="fab fa-instagram  text-cyan-300"></i>
+            </a>
+          </div>
+          <p class="mt-5 text-gray-400">
+            <i class="fas fa-envelope  text-cyan-300 list-icon"></i>Email: alizaghanchiii@gmail.com
+          </p>
+          <p class=  "text-white mt-5">
+            <i class="fas fa-phone  text-cyan-300 list-icon"></i>Phone: 923141115257
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>
+          <i class="far fa-copyright  text-cyan-300  mr-2"></i>2025 Aliza Portfolio. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script src="loaders.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>
