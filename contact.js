@@ -38,3 +38,45 @@
             });
         });
     });
+  document.getElementById("MyInput").addEventListener("submit", function (e) {
+    // Delay reset to allow submission
+    setTimeout(() => {
+      this.reset();
+    }, 500); // delay to let Formspree catch data
+  });
+  var x = document.getElementById("demo");
+
+function geolocation() {
+    if(navigator.geolocation){
+
+ navigator.geolocation.getCurrentPosition(showposition);
+
+    }
+    else{
+
+
+x.innerHTML = " location not available"
+  x.style.display = "block";
+    }
+
+
+
+
+}
+        function showposition(position){
+     x.innerHTML = "latitude: " + position.coords.latitude +" longitude: " + position.coords.longitude
+     x.style.display = "block";
+
+}
+   // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    
+    // Form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Form submission logic here
+        alert('Thank you for your message! I will get back to you soon.');
+        this.reset();
+    });

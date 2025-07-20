@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Aliza - Frontend Developer</title>
+  <meta name="description" content="Explore Aliza's technical skills and expertise">
+  <link rel="icon" type="image/x-icon" href="img/logoimages.png">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="skill.css">
+  
+
+</head>
+
+<body class="min-h-screen">
+  <!-- Preloader -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-black/90 backdrop-blur-md shadow-lg sticky top-0 z-40 border-b border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-3xl font-bold text-white">
+            <i class="fas fa-code text-cyan-400 mr-2"></i>Aliza
+          </span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:ml-6 md:flex md:items-center space-x-8">
+          <a href="index.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+            <i class="fas fa-home text-cyan-400 mr-2"></i> Home
+          </a>
+          <a href="about.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+            <i class="fas fa-user text-cyan-400 mr-2"></i> About
+          </a>
+          <a href="skill.html" class="nav-link active text-cyan-400 px-3 py-2 font-medium">
+            <i class="fas fa-cogs text-cyan-400 mr-2"></i> Skills
+          </a>
+          <a href="projects.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+            <i class="fas fa-project-diagram text-cyan-400 mr-2"></i> Projects
+          </a>
+          <a href="experience.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+            <i class="fa-regular fa-user-check text-cyan-400 mr-2"></i> Experience
+          </a>
+          <a href="resume.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+            <i class="fas fa-file-alt text-cyan-400 mr-2"></i> Resume
+          </a>
+          <a href="contact.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white hover:text-cyan-400 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed w-full z-50 bg-black/95 backdrop-blur-md">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-home text-cyan-400 w-6 mr-2"></i> Home
+        </a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-user text-cyan-400 w-6 mr-2"></i> About
+        </a>
+        <a href="skill.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800">
+          <i class="fas fa-cogs text-cyan-400 w-6 mr-2"></i> Skills
+        </a>
+        <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-project-diagram text-cyan-400 w-6 mr-2"></i> Projects
+        </a>
+        <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fa-regular fa-user-check text-cyan-400 w-6 mr-2"></i> Experience
+        </a>
+        <a href="resume.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-file-alt text-cyan-400 w-6 mr-2"></i> Resume
+        </a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-envelope text-cyan-400 w-6 mr-2"></i> Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black">
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="gradient-text">My Skills</span> & Expertise
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Combining technical proficiency with creative problem-solving to deliver exceptional results
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-5 mt-8">
+        <a href="projects.html" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+          View My Projects
+        </a>
+        <a href="Aliza_Resume.pdf" download class="inline-block border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+          Download Resume <i class="fas fa-download ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <span class="gradient-text">Technical</span> Skills
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Frontend Skills -->
+        <div class="skill-card rounded-xl p-6">
+          <div class="flex items-center mb-6">
+            <div class="bg-cyan-500/10 p-3 rounded-full mr-4">
+              <i class="fas fa-laptop-code text-cyan-400 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-white">Frontend Development</h3>
+          </div>
+          
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">HTML5</span>
+                <span class="text-cyan-400 font-medium">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">CSS3</span>
+                <span class="text-cyan-400 font-medium">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">JavaScript</span>
+                <span class="text-cyan-400 font-medium">80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">Bootstrap</span>
+                <span class="text-cyan-400 font-medium">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+               <div class="flex justify-between mb-2 mt-5">
+                <span class="text-gray-300">Jquery</span>
+                <span class="text-cyan-400 font-medium">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+               <div class="flex justify-between mb-2 mt-5">
+                <span class="text-gray-300">Tailwind</span>
+                <span class="text-cyan-400 font-medium">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Backend Skills -->
+        <div class="skill-card rounded-xl p-6">
+          <div class="flex items-center mb-6">
+            <div class="bg-cyan-500/10 p-3 rounded-full mr-4">
+              <i class="fas fa-server text-cyan-400 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-white">Backend Development</h3>
+          </div>
+          
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">PHP</span>
+                <span class="text-cyan-400 font-medium">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+            </div>
+              <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">Laravel</span>
+                <span class="text-cyan-400 font-medium">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+            </div>  <div>
+              <div class="flex justify-between mb-2">
+<span class="text-gray-300">Jetstream (Framework)</span>
+
+                <span class="text-cyan-400 font-medium">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">Git/GitHub</span>
+                <span class="text-cyan-400 font-medium">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">Problem Solving</span>
+                <span class="text-cyan-400 font-medium">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">jQuery</span>
+                <span class="text-cyan-400 font-medium">80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <span class="gradient-text">Technologies</span> I Work With
+      </h2>
+      
+      <div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+        <!-- HTML5 -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="h-12 mb-3" />
+          <span class="text-white font-medium">HTML5</span>
+        </div>
+        
+        <!-- CSS3 -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="h-12 mb-3" />
+          <span class="text-white font-medium">CSS3</span>
+        </div>
+        
+       
+        
+        <!-- Bootstrap -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="h-12 mb-3" />
+          <span class="text-white font-medium">Bootstrap</span>
+        </div>
+        
+        <!-- Tailwind -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="h-12 mb-3" />
+          <span class="text-white font-medium">Tailwind</span>
+        </div>
+        
+        <!-- GitHub -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="h-12 mb-3" />
+          <span class="text-white font-medium">GitHub</span>
+        </div>
+        
+        <!-- PHP -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="h-12 mb-3" />
+          <span class="text-white font-medium">PHP</span>
+        </div>
+         <!-- JavaScript -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="h-12 mb-3" />
+          <span class="text-white font-medium">JavaScript</span>
+        </div>
+        
+        <!-- jQuery -->
+        <div class="tech-icon bg-gray-800 p-6 rounded-xl flex flex-col items-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="jQuery" class="h-12 mb-3" />
+          <span class="text-white font-medium">jQuery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specializations Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        My <span class="gradient-text">Specializations</span>
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Frontend Development -->
+        <div class="skill-card rounded-xl p-8 text-center">
+          <div class="bg-cyan-500/10 p-4 rounded-full inline-block mb-4">
+            <i class="fas fa-laptop-code text-cyan-400 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-3">Frontend Development</h3>
+          <p class="text-gray-300">
+            Creating responsive, interactive user interfaces with modern frameworks and best practices for optimal user experience.
+          </p>
+        </div>
+        
+        <!-- Responsive Design -->
+        <div class="skill-card rounded-xl p-8 text-center">
+          <div class="bg-cyan-500/10 p-4 rounded-full inline-block mb-4">
+            <i class="fas fa-mobile-alt text-cyan-400 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-3">Responsive Design</h3>
+          <p class="text-gray-300">
+            Building websites that adapt seamlessly to all devices and screen sizes, ensuring perfect display on any platform.
+          </p>
+        </div>
+        
+        <!-- Web Performance -->
+        <div class="skill-card rounded-xl p-8 text-center">
+  <div class="bg-cyan-500/10 p-4 rounded-full inline-block mb-4">
+    <i class="fas fa-server text-cyan-400 text-3xl"></i>
+  </div>
+  <h3 class="text-2xl font-semibold text-white mb-3">Backend Website</h3>
+  <p class="text-gray-300">
+    Building secure, scalable server-side logic and database integration using modern backend frameworks .
+  </p>
+</div>
+
+    </div>
+  </section>
+
+<!-- Footer -->
+  <footer class="bg-black/90 backdrop-blur-md py-12 px-4 border-t border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto"> 
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-code text-cyan-400 mr-2"></i> 
+            <span>Aliza</span>
+          </h3>
+          <p class="text-gray-400">
+            Frontend Developer creating beautiful, functional websites and applications with modern technologies.
+          </p>
+          <div class="flex mt-6 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/alizaghanchi9/?next=%2F&hl=en" class="text-gray-400 hover:text-pink-400 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-link text-cyan-400 mr-2"></i> Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Projects
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Skills -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-tools text-cyan-400 mr-2"></i> Skills
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Frontend Development
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> UI/UX Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Responsive Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Web Applications
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-envelope text-xs text-cyan-400 mr-2"></i> alizayousuf59@gmail.com
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-phone text-xs text-cyan-400 mr-2"></i> +92 314 1115257
+            </li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold text-white mt-6 mb-4 flex items-center">
+            <i class="fas fa-download text-cyan-400 mr-2"></i> Resume
+          </h4>
+          <a href="resume.html" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+            <i class="fas fa-file-pdf mr-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class=" border-t border-gray-700 mt-4 pt-2 bg-black" >
+  <marquee id="demo"
+    behavior="scroll" 
+    direction="left"
+    style="font-family: 'Playfair Display', serif; word-spacing: 10px;" 
+    class="flex flex-row w-full block text-4xl italic font-semibold text-cyan-300 tracking-wider mt-3 px-2 py-2 uppercase cursor-pointer " onclick="geolocation()">
+
+    LONGITUDE AND LATITUDE
+  </marquee>
+</div>
+        <p class="text-gray-500 text-center text-sm mt-6">
+          &copy; 2025 Aliza. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="skill.js"></script>
+</body>
+</html>

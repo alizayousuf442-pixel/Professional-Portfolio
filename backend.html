@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliza - Portfolio Projects</title>
+  <meta name="description" content="Explore Aliza's portfolio projects showcasing frontend and backend development skills">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="projects.css">
+  
+
+</head>
+
+<body class="min-h-screen">
+  <!-- Preloader -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-black/80 backdrop-blur-md sticky top-0 z-40 border-b border-gray-800 nav-shadow" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-3xl font-bold text-white">
+            <i class="fas fa-code text-cyan-400 mr-2"></i>Aliza
+          </span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:ml-6 md:flex md:items-center space-x-8">
+          <a href="index.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-home text-cyan-400 mr-2"></i> Home
+          </a>
+          <a href="about.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-user text-cyan-400 mr-2"></i> About
+          </a>
+          <a href="skill.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-cogs text-cyan-400 mr-2"></i> Skills
+          </a>
+          <a href="projects.html" class="nav-link active text-white px-3 py-2 font-medium">
+            <i class="fas fa-project-diagram text-cyan-400 mr-2"></i> Projects
+          </a>
+          <a href="experience.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fa-regular fa-user-check text-cyan-400 mr-2"></i> Experience
+          </a>
+          <a href="resume.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-file-alt text-cyan-400 mr-2"></i> Resume
+          </a>
+          <a href="contact.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white hover:text-cyan-400 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed w-full z-50 bg-black/95 backdrop-blur-md">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-home text-cyan-400 w-6 mr-2"></i> Home
+        </a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-user text-cyan-400 w-6 mr-2"></i> About
+        </a>
+        <a href="skill.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-cogs text-cyan-400 w-6 mr-2"></i> Skills
+        </a>
+        <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800">
+          <i class="fas fa-project-diagram text-cyan-400 w-6 mr-2"></i> Projects
+        </a>
+        <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fa-regular fa-user-check text-cyan-400 w-6 mr-2"></i> Experience
+        </a>
+        <a href="resume.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-file-alt text-cyan-400 w-6 mr-2"></i> Resume
+        </a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-envelope text-cyan-400 w-6 mr-2"></i> Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-600 opacity-30"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center" data-aos="fade-up">
+          <p class="text-cyan-400 text-sm font-semibold mb-2 uppercase tracking-widest">MY CREATIVE WORK</p>
+          <h1 class="headingfont text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            Featured <span class="gradient-text">Projects</span>
+          </h1>
+          <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+            Explore my portfolio of innovative designs and development projects that solve real-world problems with creative solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="py-10 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up">
+          <button class="project-filter  px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="projects.html" class="flex items-center">
+              <i class="fas fa-layer-group mr-2"></i> All Projects
+            </a>
+          </button>
+          <button class="project-filter px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="frontend.html" class="flex items-center">
+              <i class="fas fa-laptop-code mr-2"></i> Frontend
+            </a>
+          </button>
+          <button class="project-filter active px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="backend.html" class="flex items-center">
+              <i class="fas fa-server mr-2"></i> Backend
+            </a>
+          </button>
+          <button class="project-filter px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="games.html" class="flex items-center">
+              <i class="fas fa-gamepad mr-2"></i> Games
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-12 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Backend Project -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Ecommerce Backend</h3>
+                <div class="w-12 h-12 rounded-full bg-purple-400/10 flex items-center justify-center">
+                  <i class="fas fa-server text-purple-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                Developed a robust ecommerce backend using PHP and MySQL with WAMP, featuring product management, user authentication, and order processing.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">WAMP</span>
+                <span class="tag">Backend</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-purple-400">Backend Development</span>
+                <a href="https://github.com/alizaGhanci/ecommerce-websites" target="_blank" class="text-white hover:text-purple-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant Website -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Restaurant Website</h3>
+                <div class="w-12 h-12 rounded-full bg-blue-400/10 flex items-center justify-center">
+                  <i class="fas fa-utensils text-blue-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A beautiful frontend design for a restaurant featuring smooth animations, responsive layouts, and appetizing visuals.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">UI/UX</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-blue-400">Web Design</span>
+                <a href="https://alizaghanci.github.io/FreshHeaviest/" target="_blank" class="text-white hover:text-blue-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car Showcase -->
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Car Showcase</h3>
+                <div class="w-12 h-12 rounded-full bg-cyan-400/10 flex items-center justify-center">
+                  <i class="fas fa-car text-cyan-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A sleek car showcase website built with Bootstrap featuring responsive cards, smooth transitions, and modern design elements.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">Bootstrap</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-cyan-400">UI Development</span>
+                <a href="https://alizaghanci.github.io/Carvilla/" target="_blank" class="text-white hover:text-cyan-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 text-center bg-gradient-to-r from-cyan-900/30 to-blue-900/30 my-16 rounded-xl max-w-7xl mx-auto" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Want to see more projects?</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+        Check out my specialized project categories for more examples of my work.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="frontend.html" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-full hover:bg-gray-700 transition">
+          <i class="fas fa-laptop-code mr-2"></i> Frontend Projects
+        </a>
+        <a href="games.html" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-full hover:bg-gray-700 transition">
+          <i class="fas fa-gamepad mr-2"></i> Game Projects
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black/90 backdrop-blur-md py-12 px-4 border-t border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-code text-cyan-400 mr-2"></i> 
+            <span>Aliza</span>
+          </h3>
+          <p class="text-gray-400">
+            Frontend Developer creating beautiful, functional websites and applications with modern technologies.
+          </p>
+          <div class="flex mt-6 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/alizaghanchi9/?next=%2F&hl=en" class="text-gray-400 hover:text-pink-400 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-link text-cyan-400 mr-2"></i> Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Projects
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Skills -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-tools text-cyan-400 mr-2"></i> Skills
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Frontend Development
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> UI/UX Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Responsive Design
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-envelope text-xs text-cyan-400 mr-2"></i> alizayousuf59@gmail.com
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-phone text-xs text-cyan-400 mr-2"></i> +92 314 1115257
+            </li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold text-white mt-6 mb-4 flex items-center">
+            <i class="fas fa-download text-cyan-400 mr-2"></i> Resume
+          </h4>
+          <a href="resume.html" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+            <i class="fas fa-file-pdf mr-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+      
+    div class=" border-t border-gray-700 mt-4 pt-2 bg-black" >
+  <marquee id="demo"
+    behavior="scroll" 
+    direction="left"
+    style="font-family: 'Playfair Display', serif; word-spacing: 10px;" 
+    class="flex flex-row w-full block text-4xl italic font-semibold text-cyan-300 tracking-wider mt-3 px-2 py-2 uppercase cursor-pointer " onclick="geolocation()">
+
+    LONGITUDE AND LATITUDE
+  </marquee>
+</div>
+        <p class="text-gray-500 text-center text-sm mt-6">
+          &copy; 2025 Aliza. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="project.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliza - Portfolio</title>
+  <meta name="description" content="Aliza - Creative Portfolio">
+  <link rel="icon" type="image/x-icon" href="img/logoimages.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="projects.css">
+  
+  
+</head>
+
+<body class="min-h-screen">
+  <!-- Preloader -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black" id="preloader">
+    <div class="loader"></div>
+  </div>
+  <!-- Navbar -->
+  <nav class="bg-black/80 backdrop-blur-md shadow-lg sticky top-0 z-40 border-b border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-3xl font-bold text-white">
+            <i class="fas fa-code text-cyan-400 mr-2"></i>Aliza
+          </span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:ml-6 md:flex md:items-center space-x-8">
+          <a href="index.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-home text-cyan-400 mr-2"></i> Home
+          </a>
+          <a href="about.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-user text-cyan-400 mr-2"></i> About
+          </a>
+          <a href="skill.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-cogs text-cyan-400 mr-2"></i> Skills
+          </a>
+          <a href="projects.html" class="nav-link active text-white px-3 py-2 font-medium">
+            <i class="fas fa-project-diagram text-cyan-400 mr-2"></i> Projects
+          </a>
+          <a href="experience.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fa-regular fa-user-check text-cyan-400 mr-2"></i> Experience
+          </a>
+          <a href="resume.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-file-alt text-cyan-400 mr-2"></i> Resume
+          </a>
+          <a href="contact.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white hover:text-cyan-400 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed w-full z-50 bg-black/95 backdrop-blur-md">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-home text-cyan-400 w-6 mr-2"></i> Home
+        </a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-user text-cyan-400 w-6 mr-2"></i> About
+        </a>
+        <a href="skill.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-cogs text-cyan-400 w-6 mr-2"></i> Skills
+        </a>
+        <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800">
+          <i class="fas fa-project-diagram text-cyan-400 w-6 mr-2"></i> Projects
+        </a>
+        <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fa-regular fa-user-check text-cyan-400 w-6 mr-2"></i> Experience
+        </a>
+        <a href="resume.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-file-alt text-cyan-400 w-6 mr-2"></i> Resume
+        </a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-envelope text-cyan-400 w-6 mr-2"></i> Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-600 opacity-30"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center" data-aos="fade-up">
+          <p class="text-cyan-400 text-sm font-semibold mb-2 uppercase tracking-widest">MY CREATIVE WORK</p>
+          <h1 class="headingfont text-7xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            Featured <span class="gradient-text">Projects</span>
+          </h1>
+          <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+            Explore my portfolio of innovative designs and development projects that solve real-world problems with creative solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="py-10 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up">
+          <button class="project-filter active px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="projects.html" class="flex items-center">
+              <i class="fas fa-layer-group mr-2"></i> All Projects
+            </a>
+          </button>
+          <button class="project-filter px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="frontend.html" class="flex items-center">
+              <i class="fas fa-laptop-code mr-2"></i> Frontend
+            </a>
+          </button>
+          <button class="project-filter px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="backend.html" class="flex items-center">
+              <i class="fas fa-server mr-2"></i> Backend
+            </a>
+          </button>
+          <button class="project-filter px-6 py-2 rounded-full font-medium transition-all duration-300">
+            <a href="games.html" class="flex items-center">
+              <i class="fas fa-gamepad mr-2"></i> Games
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-12 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Nobel Prize Website</h3>
+                <div class="w-12 h-12 rounded-full bg-cyan-400/10 flex items-center justify-center">
+                  <i class="fas fa-trophy text-cyan-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A responsive website showcasing Nobel Prize winners with clean design and intuitive navigation, built with modern frontend technologies.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-cyan-400">Frontend Development</span>
+                <a href="https://alizaghanci.github.io/Nobel-prizes/" class="text-white hover:text-cyan-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Fresh Heaviest</h3>
+                <div class="w-12 h-12 rounded-full bg-blue-400/10 flex items-center justify-center">
+                  <i class="fas fa-leaf text-blue-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A beautiful frontend design for a fresh produce company featuring smooth animations and responsive layouts.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">UI/UX</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-blue-400">Web Design</span>
+                <a href="https://alizaghanci.github.io/FreshHeaviest/" class="text-white hover:text-blue-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Car Showcase</h3>
+                <div class="w-12 h-12 rounded-full bg-purple-400/10 flex items-center justify-center">
+                  <i class="fas fa-car text-purple-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A sleek car showcase website built with Bootstrap featuring responsive cards, smooth transitions, and modern design elements.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">Bootstrap</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-purple-400">UI Development</span>
+                <a href="https://tourmaline-tulumba-a931d2.netlify.app/" class="text-white hover:text-purple-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Interactive Calculator</h3>
+                <div class="w-12 h-12 rounded-full bg-green-400/10 flex items-center justify-center">
+                  <i class="fas fa-calculator text-green-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A fully functional calculator with responsive design, keyboard support, and smooth animations built with vanilla JavaScript.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-green-400">Web App</span>
+                <a href="https://alizaghanci.github.io/calculators/" class="text-white hover:text-green-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Rock Paper Scissors</h3>
+                <div class="w-12 h-12 rounded-full bg-yellow-400/10 flex items-center justify-center">
+                  <i class="fas fa-hand-rock text-yellow-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A fun interactive game with score tracking, animations, and responsive design built with pure JavaScript.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Game</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-yellow-400">Game Development</span>
+                <a href="https://alizaghanci.github.io/rock-paper-scissors/" class="text-white hover:text-yellow-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Tic Tac Toe</h3>
+                <div class="w-12 h-12 rounded-full bg-red-400/10 flex items-center justify-center">
+                  <i class="fas fa-times text-red-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                Classic Tic Tac Toe game with player vs computer mode, responsive design, and winning animations.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Game Logic</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-red-400">Game Development</span>
+                <a href="https://alizaghanci.github.io/Tik-tok-toe/" class="text-white hover:text-red-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Jokes API</h3>
+                <div class="w-12 h-12 rounded-full bg-pink-400/10 flex items-center justify-center">
+                  <i class="fas fa-laugh-squint text-pink-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                A fun application that fetches random jokes from an API and displays them with smooth transitions and animations.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">API</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-pink-400">API Integration</span>
+                <a href="https://alizaghanci.github.io/API/" class="text-white hover:text-pink-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-white">Grading Calculator</h3>
+                <div class="w-12 h-12 rounded-full bg-indigo-400/10 flex items-center justify-center">
+                  <i class="fas fa-graduation-cap text-indigo-400 text-xl"></i>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm mb-6 flex-grow">
+                An educational tool that calculates grades based on input scores with visual feedback and responsive design.
+              </p>
+              <div class="flex flex-wrap mb-6">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-semibold text-indigo-400">Educational Tool</span>
+                <a href="https://alizaghanci.github.io/grading/" class="text-white hover:text-indigo-400 text-sm font-semibold flex items-center group">
+                  View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 - Coming Soon -->
+          <div class="card border-2 border-dashed border-gray-700 hover:border-cyan-400" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-6 flex flex-col h-full items-center justify-center text-center">
+              <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                <i class="fas fa-plus text-gray-400 text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-300 mb-2">More Projects Coming Soon</h3>
+              <p class="text-gray-400 text-sm mb-6">
+                I'm constantly working on new projects. Stay tuned for more exciting work!
+              </p>
+              <button class="px-6 py-2 bg-gray-800 text-gray-300 rounded-full font-medium hover:bg-gray-700 transition">
+                Notify Me
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 text-center bg-gradient-to-r from-cyan-900/30 to-blue-900/30 my-16 rounded-xl max-w-7xl mx-auto" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Have a project in mind?</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+        I'm available for freelance work. Let's collaborate to bring your ideas to life!
+      </p>
+      <a href="contact.html" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+        Get In Touch <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black/90 backdrop-blur-md py-12 px-4 border-t border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-code text-cyan-400 mr-2"></i> 
+            <span>Aliza</span>
+          </h3>
+          <p class="text-gray-400">
+            Frontend Developer creating beautiful, functional websites and applications with modern technologies.
+          </p>
+          <div class="flex mt-6 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/alizaghanchi9/?next=%2F&hl=en" class="text-gray-400 hover:text-pink-400 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-link text-cyan-400 mr-2"></i> Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Projects
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Skills -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-tools text-cyan-400 mr-2"></i> Skills
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Frontend Development
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> UI/UX Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Responsive Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Web Applications
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-envelope text-xs text-cyan-400 mr-2"></i> alizayousuf59@gmail.com
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-phone text-xs text-cyan-400 mr-2"></i> +92 314 1115257
+            </li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold text-white mt-6 mb-4 flex items-center">
+            <i class="fas fa-download text-cyan-400 mr-2"></i> Resume
+          </h4>
+          <a href="resume.html" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+            <i class="fas fa-file-pdf mr-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class=" border-t border-gray-700 mt-4 pt-2 bg-black" >
+  <marquee id="demo"
+    behavior="scroll" 
+    direction="left"
+    style="font-family: 'Playfair Display', serif; word-spacing: 10px;" 
+    class="flex flex-row w-full block text-4xl italic font-semibold text-cyan-300 tracking-wider mt-3 px-2 py-2 uppercase cursor-pointer " onclick="geolocation()">
+
+    LONGITUDE AND LATITUDE
+  </marquee>
+</div>
+        <p class="text-gray-500 text-center text-sm mt-6">
+          &copy; 2025 Aliza. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
+   
+  <script src="project.js"></script>
+</body>
+</html>

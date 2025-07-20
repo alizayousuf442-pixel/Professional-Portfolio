@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Aliza - Frontend Developer</title>
+  <link rel="icon" type="image/x-icon" href="img/logoimages.png" />
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="about.css">
+
+</head>
+<body class="min-h-screen">
+  <!-- Preloader -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-black/80 backdrop-blur-md shadow-lg sticky top-0 z-40 border-b border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="rotate-in-2-cw flex-shrink-0 flex items-center">
+          <span class="text-3xl font-bold text-white">
+            <i class="fas fa-code text-cyan-400 mr-2"></i>Aliza
+          </span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:ml-6 md:flex md:items-center space-x-8">
+          <a href="index.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-home text-cyan-400 mr-2"></i> Home
+          </a>
+          <a href="about.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-user text-cyan-400 mr-2"></i> About
+          </a>
+          <a href="skill.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-cogs text-cyan-400 mr-2"></i> Skills
+          </a>
+          <a href="projects.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-project-diagram text-cyan-400 mr-2"></i> Projects
+          </a>
+          <a href="experience.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fa-regular fa-user-check text-cyan-400 mr-2"></i> Experience
+          </a>
+          <a href="resume.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-file-alt text-cyan-400 mr-2"></i> Resume
+          </a>
+          <a href="contact.html" class="nav-link text-white px-3 py-2 font-medium">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white hover:text-cyan-400 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed w-full z-50 bg-black/95 backdrop-blur-md">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-home text-cyan-400 w-6 mr-2"></i> Home
+        </a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-user text-cyan-400 w-6 mr-2"></i> About
+        </a>
+        <a href="skill.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-cogs text-cyan-400 w-6 mr-2"></i> Skills
+        </a>
+        <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800">
+          <i class="fas fa-project-diagram text-cyan-400 w-6 mr-2"></i> Projects
+        </a>
+        <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fa-regular fa-user-check text-cyan-400 w-6 mr-2"></i> Experience
+        </a>
+        <a href="resume.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-file-alt text-cyan-400 w-6 mr-2"></i> Resume
+        </a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+          <i class="fas fa-envelope text-cyan-400 w-6 mr-2"></i> Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+ <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl headingfont text-cyan-400 font-bold">About Me</h1>
+        <p class="text-gray-300 mt-4 text-lg">Get to know the person behind the code.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="flex justify-center">
+          <img src="img/about.jpg" alt="Aliza" class="rounded-full border-4 border-cyan-500 w-72 h-72 object-cover shadow-xl" />
+        </div>
+        <div>
+          <h2 class="text-white text-2xl font-semibold mb-4">Hi, I’m Aliza 👋</h2>
+          <p class="text-gray-300 mb-6">
+            I'm a passionate Frontend Developer based in Karachi, currently studying at Aptech. I love creating elegant, responsive websites using HTML, CSS, Tailwind, and JavaScript.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-6 text-sm">
+            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
+              <h4 class="font-medium text-white mb-1">🎂 Birthday</h4>
+              <p class="text-gray-400">15 April 2003</p>
+            </div>
+            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
+              <h4 class="font-medium text-white mb-1">📍 Location</h4>
+              <p class="text-gray-400">Karachi, Pakistan</p>
+            </div>
+            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
+              <h4 class="font-medium text-white mb-1">📧 Email</h4>
+              <p class="text-gray-400 break-all">alizayousuf59@gmail.com</p>
+            </div>
+            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
+              <h4 class="font-medium text-white mb-1">🎓 Education</h4>
+              <p class="text-gray-400">Diploma (Aptech)</p>
+            </div>
+           <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
+  <div class="flex items-center space-x-3 mb-2">
+    <i class="fas fa-birthday-cake text-cyan-400 text-lg"></i>
+    <h4 class="text-white font-medium text-sm">Date of Birth</h4>
+  </div>
+  
+  <p class="text-gray-300">15 April 2003</p>
+</div>
+<div class=" info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
+  <h4 class="text-cyan-400 font-medium">Website</h4>
+  <a href="https://alizaghanci.github.io/Nobel-prizes/" target="_blank" class="text-blue-400 hover:underline break-words">
+    alizaghanci.github.io/Nobel-prizes/
+  </a>
+</div>
+
+             
+          </div>
+          <a href="resume.html" class="mt-8 inline-block gradient-btn text-white px-6 py-2 rounded-full font-medium shadow hover:shadow-lg transition">
+            <i class="fas fa-file-alt mr-2"></i> View Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="bg-black/90 border-t border-gray-800 py-6" style="box-shadow: 2px 2px 2px 2px white;">
+      <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-code text-cyan-400 mr-2"></i> 
+            <span>Aliza</span>
+          </h3>
+          <p class="text-gray-400">
+            Frontend Developer creating beautiful, functional websites and applications with modern technologies.
+          </p>
+          <div class="flex mt-6 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/alizaghanchi9/?next=%2F&hl=en" class="text-gray-400 hover:text-pink-400 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-link text-cyan-400 mr-2"></i> Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Projects
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Skills -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-tools text-cyan-400 mr-2"></i> Skills
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Frontend Development
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> UI/UX Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Responsive Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Web Applications
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-envelope text-xs text-cyan-400 mr-2"></i> alizayousuf59@gmail.com
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-phone text-xs text-cyan-400 mr-2"></i> +92 314 1115257
+            </li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold text-white mt-6 mb-4 flex items-center">
+            <i class="fas fa-download text-cyan-400 mr-2"></i> Resume
+          </h4>
+          <a href="resume.html" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+            <i class="fas fa-file-pdf mr-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-4 pt-2 bg-black">
+        <marquee id="demo"
+          behavior="scroll" 
+          direction="left"
+          style="font-family: 'Playfair Display', serif; word-spacing: 10px;" 
+          class="flex flex-row w-full block text-4xl italic font-semibold text-cyan-300 tracking-wider mt-3 px-2 py-2 uppercase cursor-pointer" onclick="geolocation()">
+          LONGITUDE AND LATITUDE
+        </marquee>
+      </div>
+      <p class="text-gray-500 text-center text-sm mt-6">
+        &copy; 2025 Aliza. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="about.js"></script>
+</body>
+</html>

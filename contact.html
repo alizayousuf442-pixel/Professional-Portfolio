@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliza - Portfolio</title>
+  <meta name="description" content="Aliza - Creative Portfolio">
+  <link rel="icon" type="image/x-icon" href="img/logoimages.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="resume.css">
+  
+  
+</head>
+
+<body class="font-sans bg-black min-h-screen">
+  <!-- Preloader -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+<!-- Navbar -->
+<nav class="bg-black/90 backdrop-blur-md shadow-lg sticky top-0 z-40 border-b border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <span class="text-3xl font-bold text-white">
+                    <i class="fas fa-code text-cyan-400 mr-2"></i>Aliza
+                </span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:ml-6 md:flex md:items-center space-x-8">
+                <a href="index.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+                    <i class="fas fa-home text-cyan-400 mr-2"></i> Home
+                </a>
+                <a href="about.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+                    <i class="fas fa-user text-cyan-400 mr-2"></i> About
+                </a>
+                <a href="skill.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+                    <i class="fas fa-cogs text-cyan-400 mr-2"></i> Skills
+                </a>
+                <a href="projects.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+                    <i class="fas fa-project-diagram text-cyan-400 mr-2"></i> Projects
+                </a>
+                <a href="experience.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+                    <i class="fa-regular fa-user-check text-cyan-400 mr-2"></i> Experience
+                </a>
+                <a href="resume.html" class="nav-link text-white px-3 py-2 font-medium hover:text-cyan-400 transition">
+                    <i class="fas fa-file-alt text-cyan-400 mr-2"></i> Resume
+                </a>
+                <a href="contact.html" class="nav-link active text-white px-3 py-2 font-medium">
+                    <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-white hover:text-cyan-400 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed w-full z-50 bg-black/95 backdrop-blur-md">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+                <i class="fas fa-home text-cyan-400 w-6 mr-2"></i> Home
+            </a>
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+                <i class="fas fa-user text-cyan-400 w-6 mr-2"></i> About
+            </a>
+            <a href="skill.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+                <i class="fas fa-cogs text-cyan-400 w-6 mr-2"></i> Skills
+            </a>
+            <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+                <i class="fas fa-project-diagram text-cyan-400 w-6 mr-2"></i> Projects
+            </a>
+            <a href="experience.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+                <i class="fa-regular fa-user-check text-cyan-400 w-6 mr-2"></i> Experience
+            </a>
+            <a href="resume.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">
+                <i class="fas fa-file-alt text-cyan-400 w-6 mr-2"></i> Resume
+            </a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800">
+                <i class="fas fa-envelope text-cyan-400 w-6 mr-2"></i> Contact
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow">
+    <!-- Header Section -->
+    <section class="relative py-20 px-4 text-center bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                <span class="text-cyan-400">Contact</span> Me
+            </h1>
+            <p class="text-lg text-gray-300 mb-8">
+                Let's connect and discuss how we can work together to bring your ideas to life.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#contact-form" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-full transition duration-300">
+                    Send a Message
+                </a>
+                <a href="tel:+923141115257" class="px-6 py-3 border border-cyan-500 text-cyan-500 text-white hover:bg-cyan-500 hover:text-white font-medium rounded-full transition duration-300">
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="py-16 px-4 md:px-8 bg-black">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Email Card -->
+            <div class="bg-gray-900 rounded-xl p-8 text-center hover:transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-envelope text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Email</h3>
+                <p class="text-gray-400 mb-4">Reach out anytime</p>
+                <a href="mailto:alizayousuf59@gmail.com" class="text-white hover:underline">alizayousuf59@gmail.com</a>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="bg-gray-900 rounded-xl p-8 text-center hover:transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-phone-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Phone</h3>
+                <p class="text-gray-400 mb-4">Mon-Fri, 9am-6pm</p>
+                <a href="tel:+923141115257" class="text-white hover:underline">+92 314 1115257</a>
+            </div>
+
+            <!-- Location Card -->
+            <div class="bg-gray-900 rounded-xl p-8 text-center hover:transform hover:scale-105 transition duration-300">
+                <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Location</h3>
+                <p class="text-gray-400 mb-4">Based in Karachi, Pakistan</p>
+                <a href="https://www.google.com/maps/place/Nishtar+Rd,+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.878498,67.0202743,17z" 
+                   target="_blank" 
+                   class="text-white hover:underline">
+                    Nishtar Road, Karachi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-16 px-4 md:px-8 bg-gray-900 ">
+        <div class="max-w-4xl mx-auto border-4  border-gray-800 rounded-lg p-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Have a project in mind or want to discuss potential opportunities? Fill out the form below and I'll get back to you as soon as possible.
+                </p>
+            </div>
+
+            <form action="https://formspree.io/f/xeoeqedo" method="post" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-white mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" 
+                               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
+                               placeholder="Enter your name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-white mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" 
+                               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
+                               placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-white mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" 
+                           class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
+                           placeholder="What's this about?" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-white mb-2">Your Message</label>
+                    <textarea id="message" name="message" rows="5" 
+                              class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
+                              placeholder="Tell me about your project or inquiry" required></textarea>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="consent" name="consent" 
+                           class="h-4 w-4 text-cyan-500 focus:ring-cyan-500 border-gray-600 rounded" required>
+                    <label for="consent" class="ml-2 text-gray-400">
+                        I agree to the privacy policy and terms of service
+                    </label>
+                </div>
+                <div class="btn bg-cyan-600">
+                <button type="submit" class="w-full py-4 px-6  hover:bg-cyan-600 text-white font-medium rounded-lg transition duration-300">Send Message</button>
+           </div>
+           
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-16 px-4 md:px-8 bg-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Connect With Me</h2>
+            <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
+                Follow me on social media to stay updated with my latest projects and insights.
+            </p>
+            
+            <div class="flex justify-center gap-6">
+                <a href="https://github.com/alizaGhanci" target="_blank" 
+                   class="w-14 h-14 bg-gray-800 hover:bg-cyan-500 rounded-full flex items-center justify-center transition duration-300">
+                    <i class="fab fa-github text-white text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" 
+                   class="w-14 h-14 bg-gray-800 hover:bg-cyan-500 rounded-full flex items-center justify-center transition duration-300">
+                    <i class="fab fa-linkedin-in text-white text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/alizaghanchi9/?next=%2F&hl=en" target="_blank" 
+                   class="w-14 h-14 bg-gray-800 hover:bg-cyan-500 rounded-full flex items-center justify-center transition duration-300">
+                    <i class="fab fa-instagram text-white text-2xl"></i>
+                </a>
+                <a href="#" target="_blank" 
+                   class="w-14 h-14 bg-gray-800 hover:bg-cyan-500 rounded-full flex items-center justify-center transition duration-300">
+                    <i class="fab fa-twitter text-white text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 px-4 md:px-8 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 text-center">Find Me Here</h2>
+            <div class="rounded-xl overflow-hidden shadow-xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14478.722509321165!2d67.02269022666256!3d24.87475519565607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e3a3e1e1a2d%3A0x9e9e9e9e9e9e9e9e!2sNishtar%20Rd%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1718787698914!5m2!1sen!2s" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-lg"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+ <!-- Footer -->
+  <footer class="bg-black/90 backdrop-blur-md py-12 px-4 border-t border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-code text-cyan-400 mr-2"></i> 
+            <span>Aliza</span>
+          </h3>
+          <p class="text-gray-400">
+            Frontend Developer creating beautiful, functional websites and applications with modern technologies.
+          </p>
+          <div class="flex mt-6 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/alizaghanchi9/?next=%2F&hl=en" class="text-gray-400 hover:text-pink-400 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-link text-cyan-400 mr-2"></i> Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Projects
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center">
+                <i class="fas fa-chevron-right text-xs text-cyan-400 mr-2"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Skills -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-tools text-cyan-400 mr-2"></i> Skills
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Frontend Development
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> UI/UX Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Responsive Design
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-check text-xs text-cyan-400 mr-2"></i> Web Applications
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-envelope text-cyan-400 mr-2"></i> Contact
+          </h4>
+          <ul class="space-y-3">
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-envelope text-xs text-cyan-400 mr-2"></i> alizayousuf59@gmail.com
+            </li>
+            <li class="text-gray-400 flex items-center">
+              <i class="fas fa-phone text-xs text-cyan-400 mr-2"></i> +92 314 1115257
+            </li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold text-white mt-6 mb-4 flex items-center">
+            <i class="fas fa-download text-cyan-400 mr-2"></i> Resume
+          </h4>
+          <a href="resume.html" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+            <i class="fas fa-file-pdf mr-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class=" border-t border-gray-700 mt-4 pt-2 bg-black" >
+  <marquee id="demo"
+    behavior="scroll" 
+    direction="left"
+    style="font-family: 'Playfair Display', serif; word-spacing: 10px;" 
+    class="flex flex-row w-full block text-4xl italic font-semibold text-cyan-300 tracking-wider mt-3 px-2 py-2 uppercase cursor-pointer " onclick="geolocation()">
+
+    LONGITUDE AND LATITUDE
+  </marquee>
+</div>
+        <p class="text-gray-500 text-center text-sm mt-6">
+          &copy; 2025 Aliza. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="project.js"></script>
+
+</body>
+</html>

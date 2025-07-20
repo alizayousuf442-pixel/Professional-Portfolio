@@ -1,0 +1,160 @@
+ 
+    :root {
+      --primary: #06b6d4;
+      --primary-dark: #0891b2;
+      --secondary: #3b82f6;
+      --dark: #0f172a;
+      --light: #f8fafc;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      scroll-behavior: smooth;
+    }
+    
+    .headingfont {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+    }
+    
+    .gradient-text {
+       background: linear-gradient(90deg, #06b6d4, #3b82f6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+      .header-banner-gradient {
+    background: linear-gradient(90deg,  #6499ee ,  #62daf0);
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+    }
+    
+    .header-banner-gradient::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, var(--secondary) 0%, var(--primary) 70%);
+      animation: rotate 20s linear infinite;
+      z-index: 0;
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    
+    .experience-card {
+      transition: all 0.3s ease;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid white;
+      border-radius: 16px;
+    }
+    
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(var(--primary), 0.3);
+      border-color: rgba(var(--primary), 0.4);
+    }
+    
+    .header-banner {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    }
+    
+    .typewriter {
+      color: white;
+      text-shadow: 0 0 10px rgba(var(--primary), 0.7);
+      font-size: clamp(2rem, 8vmin, 4rem);
+      font-weight: 700;
+      display: inline-block;
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid var(--primary);
+      animation: typing 3.5s steps(30, end), blink .75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 50% }
+    }
+    
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: var(--primary) }
+    }
+    
+    .loader {
+      border: 5px solid rgba(255, 255, 255, 0.1);
+      border-top: 5px solid var(--primary);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg) }
+      100% { transform: rotate(360deg) }
+    }
+    
+    .marquee-text {
+      text-shadow: 0 0 10px rgba(var(--primary), 0.7);
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    .active:after {
+      width: 100%;
+    }
+    
+    .rotate-in-2-cw {
+      animation: rotate-in-2-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    
+    @keyframes rotate-in-2-cw {
+      0% { transform: rotate(-45deg); opacity: 0 }
+      100% { transform: rotate(0); opacity: 1 }
+    }
+    
+    .list-icon {
+      width: 20px;
+      text-align: center;
+      margin-right: 8px;
+    }
+    
+    .certificate-btn {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      transition: all 0.3s ease;
+    }
+    
+    .certificate-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(var(--primary), 0.3);
+    }
+  

@@ -1,3 +1,9 @@
+
+
+::-webkit-scrollbar{
+
+  display: none;
+}
 .GetStarted{
     position: fixed;
     height: 100%;
