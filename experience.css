@@ -68,35 +68,34 @@
       background: linear-gradient(90deg, #06b6d4, #3b82f6);
     }
     
-       .typewriter {
-   color:white;
-  text-shadow: 5px 2px 4px hwb(180 8% 88%);
-  font-size: 8.2vmin;
-  font-weight: 100px;
-   display: inline-block;
-    font-family: monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid white;
-    animation: typing 4s steps(22) infinite alternate, blink .7s infinite;
-  }
-      @media (max-width:768px) {
+        .typewriter {
+      color:white;
+      text-shadow: 5px 2px 4px hwb(180 8% 88%);
+   font-size: clamp(50px, 4vw, 50px); /* responsive font size */
+      font-weight: 500px;
+      display: inline-block;
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid hwb(180 8% 87%);
+      animation: typing 4s steps(22) infinite alternate, blink .7s infinite;
+    }
+    @media (max-width:768px) {
       .typewriter{
 
-          font-size:4.8vmin;
-      }
-     
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 60%; }
-    }
+font-size: clamp(20px, 4vw, 50px); /* responsive font size */      }
 
       
     }
 
     @keyframes typing {
       from { width: 0; }
-      to { width: 55%; }
+      to { width: 60%; }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: hwb(180 18% 9%); }
     }
 
     .loader {

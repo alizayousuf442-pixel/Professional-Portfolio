@@ -89,38 +89,35 @@ margin-right: 8px
        
 
         
-        .typewriter {
-   color:white;
-  text-shadow: 5px 2px 4px hwb(180 8% 88%);
-  font-size: 8.2vmin;
-  font-weight: 100px;
-   display: inline-block;
-    font-family: monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid white;
-    animation: typing 4s steps(22) infinite alternate, blink .7s infinite;
-  }
-
-   @media (max-width:768px) {
+      .typewriter {
+      color:white;
+      text-shadow: 5px 2px 4px hwb(180 8% 88%);
+   font-size: clamp(50px, 4vw, 50px); /* responsive font size */
+      font-weight: 500px;
+      display: inline-block;
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid hwb(180 8% 87%);
+      animation: typing 4s steps(22) infinite alternate, blink .7s infinite;
+    }
+    @media (max-width:768px) {
       .typewriter{
 
-          font-size:4.8vmin;
-      }
-     
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 60%; }
-    }
+font-size: clamp(20px, 4vw, 50px); /* responsive font size */      }
 
       
     }
 
-     @keyframes typing {
+    @keyframes typing {
       from { width: 0; }
-      to { width: 35%; }
+      to { width: 40%; }
     }
 
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: hwb(180 18% 9%); }
+    }
   
     
    

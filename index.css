@@ -245,7 +245,7 @@
     .typewriter {
       color:white;
       text-shadow: 5px 2px 4px hwb(180 8% 88%);
-      font-size: 6vmin;
+   font-size: clamp(50px, 4vw, 50px); /* responsive font size */
       font-weight: 500px;
       display: inline-block;
       font-family: monospace;
@@ -257,20 +257,14 @@
     @media (max-width:768px) {
       .typewriter{
 
-          font-size:4.8vmin;
-      }
-     
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 60%; }
-    }
+font-size: clamp(20px, 4vw, 50px); /* responsive font size */      }
 
       
     }
 
     @keyframes typing {
       from { width: 0; }
-      to { width: 45%; }
+      to { width: 60%; }
     }
 
     @keyframes blink {
