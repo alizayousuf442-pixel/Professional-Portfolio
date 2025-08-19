@@ -257,14 +257,12 @@
     @media (max-width:768px) {
       .typewriter{
 
-font-size: clamp(20px, 4vw, 50px); /* responsive font size */      }
-
-      
-    }
+font-size: clamp(20px, 4vw, 50px);
+   }}
 
     @keyframes typing {
       from { width: 0; }
-      to { width: 60%; }
+      to { width: 40%; }
     }
 
     @keyframes blink {
