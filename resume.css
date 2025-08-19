@@ -94,25 +94,33 @@ margin-right: 8px
   text-shadow: 5px 2px 4px hwb(180 8% 88%);
   font-size: 8.2vmin;
   font-weight: 100px;
-  
-    display: inline-block;
+   display: inline-block;
     font-family: monospace;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid hwb(180 8% 87%);
+    border-right: .15em solid white;
     animation: typing 4s steps(22) infinite alternate, blink .7s infinite;
   }
 
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 30%; }
-  }
+   @media (max-width:768px) {
+      .typewriter{
 
-  @keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: hwb(180 18% 9%); }
-  }
- 
+          font-size:4.8vmin;
+      }
+     
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 60%; }
+    }
+
+      
+    }
+
+     @keyframes typing {
+      from { width: 0; }
+      to { width: 35%; }
+    }
+
   
     
    

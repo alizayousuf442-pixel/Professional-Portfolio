@@ -245,7 +245,7 @@
     .typewriter {
       color:white;
       text-shadow: 5px 2px 4px hwb(180 8% 88%);
-      font-size: 8.2vmin;
+      font-size: 6vmin;
       font-weight: 500px;
       display: inline-block;
       font-family: monospace;
@@ -254,10 +254,23 @@
       border-right: .15em solid hwb(180 8% 87%);
       animation: typing 4s steps(22) infinite alternate, blink .7s infinite;
     }
+    @media (max-width:768px) {
+      .typewriter{
 
+          font-size:4.8vmin;
+      }
+     
     @keyframes typing {
       from { width: 0; }
       to { width: 60%; }
+    }
+
+      
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 45%; }
     }
 
     @keyframes blink {
