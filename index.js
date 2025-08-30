@@ -1,69 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize animations
-  setTimeout(() => {
-    document.querySelector('.slide-top').classList.add('visible');
-  }, 500);
-
-  // Initialize AOS animation
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true
-  });
-
-  // Mobile menu toggle
-  document.getElementById('mobile-menu-button').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
-
-  // Preloader
-  window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0';
-    setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 500);
-  });
-
-  // Geolocation functionality
-  const geoMarquee = document.getElementById("demo");
   
-  // Make geolocation available on click
-  geoMarquee.addEventListener('click', getLocation);
+      // Select button and menu
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-  function getLocation() {
+  // Toggle menu visibility on button click
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+    function geolocation() {
     if (navigator.geolocation) {
-      geoMarquee.innerHTML = "Fetching location...";
-      navigator.geolocation.getCurrentPosition(
-        showPosition,
-        showError,
-        { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
-      );
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
-      geoMarquee.innerHTML = "Geolocation is not supported by this browser";
+      alert("Geolocation is not supported by this browser.");
     }
   }
 
   function showPosition(position) {
-    geoMarquee.innerHTML = `Latitude: ${position.coords.latitude.toFixed(4)} 
-                          Longitude: ${position.coords.longitude.toFixed(4)}`;
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    const marquee = document.getElementById('demo');
+    marquee.textContent = `Latitude: ${lat.toFixed(6)}, Longitude: ${lon.toFixed(6)}`;
   }
 
   function showError(error) {
+    const marquee = document.getElementById('demo');
     switch(error.code) {
       case error.PERMISSION_DENIED:
-        geoMarquee.innerHTML = "User denied location request";
+        marquee.textContent = "User denied the request for Geolocation.";
         break;
       case error.POSITION_UNAVAILABLE:
-        geoMarquee.innerHTML = "Location unavailable";
+        marquee.textContent = "Location information is unavailable.";
         break;
       case error.TIMEOUT:
-        geoMarquee.innerHTML = "Request timed out";
+        marquee.textContent = "The request to get user location timed out.";
         break;
-      case error.UNKNOWN_ERROR:
-        geoMarquee.innerHTML = "Unknown error occurred";
+      default:
+        marquee.textContent = "An unknown error occurred.";
         break;
     }
   }
-});
+    // Init AOS
+    AOS.init({ duration: 1200, once: true });
+
+    // Preloader
+    window.addEventListener("load", () => {
+      document.getElementById("preloader").style.display = "none";
+    });
+  
+    // Typewriter Animation
+    const text = "Welcome to My Portfolio";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 120);
+      }
+    }
+    window.onload = typeWriter;
+  

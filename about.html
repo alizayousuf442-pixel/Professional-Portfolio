@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Aliza - Frontend Developer</title>
-  <link rel="icon" type="image/x-icon" href="img/logoimages.png" />
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliza - Portfolio</title>
+ <link rel="icon" type="image/x-icon" href="img/logoimages.png">
+ <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="img/website.png" />
   <link rel="stylesheet" href="about.css">
+ 
 
 </head>
-<body class="min-h-screen">
+  <!-- TailwindCSS -->
+  
+
+</head>
+<body class="bg-black text-white font-sans">
+
   <!-- Preloader -->
-  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black" id="preloader">
+  <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-black z-50">
     <div class="loader"></div>
   </div>
 
@@ -95,66 +112,67 @@
     </div>
   </nav>
 
- <section class="py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h1 class="text-4xl headingfont text-cyan-400 font-bold">About Me</h1>
-        <p class="text-gray-300 mt-4 text-lg">Get to know the person behind the code.</p>
-      </div>
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div class="flex justify-center">
-          <img src="img/about.jpg" alt="Aliza" class="rounded-full border-4 border-cyan-500 w-72 h-72 object-cover shadow-xl" />
-        </div>
-        <div>
-          <h2 class="text-white text-2xl font-semibold mb-4">Hi, I’m Aliza 👋</h2>
-          <p class="text-gray-300 mb-6">
-  I'm a passionate <span class="font-semibold text-white">Frontend & PHP Developer</span> based in Karachi, currently studying at Aptech. I enjoy creating elegant, responsive websites using <span class="font-semibold text-white">HTML, CSS, Tailwind, JavaScript, and PHP</span> — blending modern design with dynamic functionality.
-</p>
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 text-center" data-aos="zoom-in">
+    <h1 class="text-4xl font-bold text-cyan-400 mb-4">About Me</h1>
+    <p class="text-gray-300 text-lg">✨ <span class="highlight">Frontend Developer</span> | <span class="highlight">Canva Designer</span> | <span class="highlight">PHP Developer</span> ✨</p>
+  </section>
 
-          <div class="grid sm:grid-cols-2 gap-6 text-sm">
-            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
-              <h4 class="font-medium text-white mb-1">🎂 Birthday</h4>
-              <p class="text-gray-400">15 April 2003</p>
-            </div>
-            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
-              <h4 class="font-medium text-white mb-1">📍 Location</h4>
-              <p class="text-gray-400">Karachi, Pakistan</p>
-            </div>
-            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
-              <h4 class="font-medium text-white mb-1">📧 Email</h4>
-              <p class="text-gray-400 break-all">alizayousuf442@gmail.com</p>
-            </div>
-            <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
-              <h4 class="font-medium text-white mb-1">🎓 Education</h4>
-              <p class="text-gray-400">Diploma (Aptech)</p>
-            </div>
-           <div class="info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
-  <div class="flex items-center space-x-3 mb-2">
-    <i class="fas fa-birthday-cake text-cyan-400 text-lg"></i>
-    <h4 class="text-white font-medium text-sm">Date of Birth</h4>
-  </div>
-  
-  <p class="text-gray-300">15 April 2003</p>
-</div>
-<div class=" info-card p-4 rounded-md shadow-md bg-gray-800 border border-cyan-600 w-full sm:w-50">
-  <h4 class="text-cyan-400 font-medium">Website</h4>
-  <a href="https://alizaghanci.github.io/Nobel-prizes/" target="_blank" class="text-blue-400 hover:underline break-words">
-    alizaghanci.github.io/Nobel-prizes/
-  </a>
-</div>
+  <!-- About Section -->
+  <section class="py-16 px-6 max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <img src="img/about.jpg" alt="Aliza"
+        class="rounded-full border-4 border-cyan-400 w-72 h-72 object-cover shadow-xl mx-auto transform transition duration-500 hover:scale-105 hover:rotate-2" />
+    </div>
+    <div data-aos="fade-left">
+      <h2 class="text-2xl font-semibold mb-4">Hi, I’m Aliza 👋</h2>
+      <p class="text-gray-300 mb-6">
+        I specialize in <span class="highlight">Frontend Development</span>, creative <span class="highlight">Canva Design</span>, 
+        and powerful <span class="highlight">PHP Development</span>.  
+        I love transforming ideas into beautiful digital experiences that are modern, user-friendly, and engaging.
+      </p>
+      <button class="gradient-btn px-6 py-3 rounded-lg font-semibold">Download CV</button>
+    </div>
+  </section>
 
-             
-          </div>
-          <a href="resume.html" class="mt-8 inline-block gradient-btn text-white px-6 py-2 rounded-full font-medium shadow hover:shadow-lg transition">
-            <i class="fas fa-file-alt mr-2"></i> View Resume
-          </a>
+  <!-- Skills Highlight -->
+  <section class="py-16 bg-gray-900" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-6">🚀 My Main Skills</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="p-6 bg-black rounded-xl shadow-lg hover:shadow-cyan-500/40 transition" data-aos="zoom-in">
+          <i class="fas fa-code text-cyan-400 text-4xl mb-4"></i>
+          <h3 class="text-lg font-semibold highlight">Frontend Developer</h3>
+          <p class="text-gray-400 text-sm mt-2">Building responsive, modern websites with HTML, CSS, JS & Tailwind.</p>
         </div>
+
+        <div class="p-6 bg-black rounded-xl shadow-lg hover:shadow-pink-500/40 transition" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-paint-brush text-pink-400 text-4xl mb-4"></i>
+          <h3 class="text-lg font-semibold highlight">Canva Designer</h3>
+          <p class="text-gray-400 text-sm mt-2">Designing stunning Canva templates, posts, and branding visuals.</p>
+        </div>
+
+        <div class="p-6 bg-black rounded-xl shadow-lg hover:shadow-blue-500/40 transition" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-database text-blue-400 text-4xl mb-4"></i>
+          <h3 class="text-lg font-semibold highlight">PHP Developer</h3>
+          <p class="text-gray-400 text-sm mt-2">Developing dynamic websites and backend systems using PHP & MySQL.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-<footer class="bg-black/90 border-t border-gray-800 py-6" style="box-shadow: 2px 2px 2px 2px white;">
-      <div class="max-w-7xl mx-auto">
+  <!-- Marquee -->
+  <div class="bg-black py-4 overflow-hidden">
+    <marquee id="demo" class="text-cyan-400 font-bold text-xl">
+      ✨ Frontend Developer | Canva Designer | PHP Developer ✨
+    </marquee>
+  </div>
+
+ <!-- Footer -->
+  <footer class="bg-black/90 backdrop-blur-md py-12 px-4 border-t border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
+    <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- About -->
         <div>
@@ -267,8 +285,10 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="about.js"></script>
+
 </body>
 </html>

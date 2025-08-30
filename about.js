@@ -1,58 +1,61 @@
-//  Initialize AOS animation 
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true
-    });
+  
+      // Select button and menu
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-    // Mobile menu toggle
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    });
+  // Toggle menu visibility on button click
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+    function geolocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function showPosition(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    const marquee = document.getElementById('demo');
+    marquee.textContent = `Latitude: ${lat.toFixed(6)}, Longitude: ${lon.toFixed(6)}`;
+  }
+
+  function showError(error) {
+    const marquee = document.getElementById('demo');
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        marquee.textContent = "User denied the request for Geolocation.";
+        break;
+      case error.POSITION_UNAVAILABLE:
+        marquee.textContent = "Location information is unavailable.";
+        break;
+      case error.TIMEOUT:
+        marquee.textContent = "The request to get user location timed out.";
+        break;
+      default:
+        marquee.textContent = "An unknown error occurred.";
+        break;
+    }
+  }
+    // Init AOS
+    AOS.init({ duration: 1200, once: true });
 
     // Preloader
-    window.addEventListener('load', function() {
-      const preloader = document.getElementById('preloader');
-      setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 500);
-      }, 1000);
+    window.addEventListener("load", () => {
+      document.getElementById("preloader").style.display = "none";
     });
-
-    // Filter projects
-    const filters = document.querySelectorAll('.project-filter');
-    filters.forEach(filter => {
-      filter.addEventListener('click', function() {
-        filters.forEach(f => f.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-
- var x = document.getElementById("demo");
-
-function geolocation() {
-    if(navigator.geolocation){
-
- navigator.geolocation.getCurrentPosition(showposition);
-
+  
+    // Typewriter Animation
+    const text = "Welcome to My Portfolio";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 120);
+      }
     }
-    else{
-
-
-x.innerHTML = " location not available"
-  x.style.display = "block";
-    }
-
-
-
-
-}
-        function showposition(position){
-     x.innerHTML = "latitude: " + position.coords.latitude +" longitude: " + position.coords.longitude
-     x.style.display = "block";
-
-} 
+    window.onload = typeWriter;
+  

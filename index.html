@@ -6,27 +6,36 @@
   <title>Aliza - Portfolio</title>
   <link rel="icon" type="image/x-icon " href="img/logoimages.png" >
   <meta name="description" content="Aliza - Portfolio">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
- 
-  <link rel="icon" type="image/x-icon " href="img/website.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="img/logoimages.png">
+ <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome CDN (v6+) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="img/website.png" />
   <link rel="stylesheet" href="index.css">
+ 
 
 </head>
-<body class="min-h-screen">
+  <!-- TailwindCSS -->
+  
+
+</head>
+<body class="bg-black text-white font-sans">
+
   <!-- Preloader -->
-  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black" id="preloader">
+  <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-black z-50">
     <div class="loader"></div>
   </div>
 
@@ -105,35 +114,52 @@
     </div>
   </nav>
 
-  <header id="home" class="hero-bg relative text-white min-h-screen flex items-center overflow-hidden">
-    <div class="w-full px-4 sm:px-6 lg:px-8 text-center">
-      <!-- Animated Floating Image -->
-      <div class="w-full animate-float rounded-4xl overflow-hidden shadow-lg mx-auto">
-        <img src="img/frontimage.jpg" alt="front-image" class="kenburns-top w-full h-full object-cover rounded-xl" />
-      </div> 
-      
-      <div class="slide-top absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center w-full px-4">
-        <h1 class="typewriter" style="--characters: 20ch;">Welcome To My Portfolio</h1>
-        
-        <p class="para text-xl md:text-2xl mt-5 mb-8 max-w-3xl">
-          Web Developer specializing in web development
-        </p>
 
-        <!-- Buttons -->
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="about.html" class="text-white font-bold py-3 px-8 rounded-full w-50 transition duration-300 transition-transform hover:scale-105 duration-300" 
-          style="background: linear-gradient(113deg, rgb(16, 20, 20) 2%, rgb(55, 59, 59) 45%, rgb(22, 34, 36) 88%, rgba(140, 215, 222, 1) 100% );
-           box-shadow:hover 20px 4px 8px rgba(0,0,0,0.3); "> <i class="fas fa-user icons mx-0.2 w-6"></i>About Me</a>
-          </a>
-          <a href="projects.html" class="bg-transparent hover:bg-white hover:text-gray-900 text-black font-bold py-3 px-8 border-2 border-black rounded-full transition duration-300">
-            <i class="fas fa-project-diagram mr-2"></i> My Projects
-          </a>
-        </div>
-      </div>
+  <section class="relative w-full h-screen flex items-center justify-center bg-cover bg-center" 
+           style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80');">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6">
+      <!-- Typewriter Heading -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-cyan-400 mb-4 leading-tight">
+        <span id="typewriter"></span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-8">
+      Aspiring Web Developer | Building Skills in HTML, CSS, JavaScript & PHP 💻
+      </p>
+
+  <div class="flex flex-wrap gap-6 justify-center mt-6">
+  <!-- Contact Button -->
+  <a href="contact.html" 
+     class="relative px-8 py-3 text-lg font-semibold text-white rounded-full
+            bg-gradient-to-r from-cyan-500 to-black 
+            shadow-[0_0_15px_rgba(0,255,255,0.6)]
+            transition-all duration-300 ease-in-out 
+            hover:scale-110 hover:shadow-[0_0_30px_rgba(0,255,255,0.8)]">
+    ✉️ Contact Me
+  </a>
+
+  <!-- About Button -->
+  <a href="about.html" 
+     class="relative px-8 py-3 text-lg font-semibold text-white rounded-full
+            bg-gradient-to-r from-black to-cyan-500 
+            shadow-[0_0_15px_rgba(0,0,0,0.6)]
+            transition-all duration-300 ease-in-out 
+            hover:scale-110 hover:shadow-[0_0_30px_rgba(0,255,255,0.7)]">
+    👩‍💻 About Me
+  </a>
+</div>
+
+
     </div>
-  </header>
+  </section>
 
-  <!-- Footer -->
+ <!-- Footer -->
   <footer class="bg-black/90 backdrop-blur-md py-12 px-4 border-t border-gray-800" style="box-shadow: 2px 2px 2px 2px white">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -147,13 +173,13 @@
             Frontend Developer creating beautiful, functional websites and applications with modern technologies.
           </p>
           <div class="flex mt-6 space-x-4">
-            <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+            <a href="https://github.com/alizayousuf442-pixel" class="text-gray-400 hover:text-cyan-400 transition">
               <i class="fab fa-github text-xl"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+            <a href="https://www.linkedin.com/in/aliza-yousuf-38b258377/" class="text-gray-400 hover:text-blue-400 transition">
               <i class="fab fa-linkedin text-xl"></i>
             </a>
-            <a href="https://www.instagram.com/alizaghanchi9/?next=%2F&hl=en" class="text-gray-400 hover:text-pink-400 transition">
+            <a href="https://www.instagram.com/aliza_70541/" class="text-gray-400 hover:text-pink-400 transition">
               <i class="fab fa-instagram text-xl"></i>
             </a>
           </div>
@@ -249,9 +275,9 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="index.js"></script>
- 
+
 </body>
 </html>
